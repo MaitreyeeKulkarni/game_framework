@@ -19,14 +19,15 @@ public:
 
 private slots:
     void on_pushButton_pressed();
-    void check();
 
 private:
     Ui::MainWindow *ui;
     void myFunction();
     void update_move(int, int, QPushButton*);
-    bool check_win(int, int);
-    QSignalMapper *signalMapper;
+    void check_win(int, int);
+    bool check_row_win(int, int);
+    bool check_column_win(int, int);
+    bool check_diagonal_win(int, int);
     QPushButton *button[10][10];
 };
 
